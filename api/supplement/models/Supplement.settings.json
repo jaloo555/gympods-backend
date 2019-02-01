@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "supplement",
+  "info": {
+    "name": "supplement",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "price": {
+      "default": "",
+      "type": "decimal"
+    },
+    "description": {
+      "default": "",
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "sizes": {
+      "collection": "size",
+      "via": "supplement"
+    },
+    "flavors": {
+      "collection": "flavors",
+      "via": "supplement"
+    }
+  }
+}
